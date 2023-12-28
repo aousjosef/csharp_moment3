@@ -1,4 +1,4 @@
-# Dagbok Program - M3 Kursen
+# Dagbok Program - C# Moment 3
 
 ## Beskrivning
 Detta program är utvecklat som en del av kursmoment 3 i C# vid Mittuniversitetet. Programmet tillåter användaren att hantera en dagbok genom att visa alla anteckningar, lägga till nya anteckningar, radera befintliga anteckningar och avsluta programmet.
