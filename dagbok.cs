@@ -31,6 +31,7 @@ class DagBokClass
     public void converJsonFileToList()
     {
 
+        //check if file exist
         if (!File.Exists(fileName))
         {
             // If the file doesn't exist, create a new empty JSON file
@@ -47,7 +48,7 @@ class DagBokClass
             jsonContent = File.ReadAllText(fileName);
 
             // Deserialize the JSON content into a list of NoteClass objects
-            Notes = System.Text.Json.JsonSerializer.Deserialize<List<NoteClass>>(jsonContent);
+            Notes = JsonSerializer.Deserialize<List<NoteClass>>(jsonContent);
 
         }
 
@@ -75,7 +76,7 @@ class DagBokClass
 
     public void deleteNote(int noteIndex)
     {
-        if (noteIndex > Notes.Count - 1)
+        if (noteIndex > Notes.Count - 1 || noteIndex < 0)
         {
             Console.WriteLine($"Erorr! value must be a a number between 0 and {Notes.Count - 1}");
         }
