@@ -26,6 +26,7 @@ class Program
         {
             showOptions();
             var option = Console.ReadLine();
+            Console.CursorVisible =true;
 
             if (int.TryParse(option, out int num))
             {
@@ -96,7 +97,8 @@ class Program
                     //Existing program
                     case 4:
                         Console.WriteLine("Exiting program. Goodbye!");
-                        return;
+                        Environment.Exit(0);
+                        break;
 
 
                     //Default value
