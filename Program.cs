@@ -45,11 +45,11 @@ class Program
                     case 2:
                         Console.WriteLine("You entered 2. please enter your name: ");
 
-                        string author = Console.ReadLine();
+                        string? author = Console.ReadLine();
 
                         Console.WriteLine("You entered 2. please enter your note: ");
 
-                        string content = Console.ReadLine();
+                        string? content = Console.ReadLine();
 
 
                         if (!string.IsNullOrWhiteSpace(author) && !string.IsNullOrWhiteSpace(content))
@@ -77,7 +77,7 @@ class Program
                     //Rader en note
                     case 3:
                         Console.WriteLine("You entered 3. Which note number do you want to remove?");
-                        string noteIndexToBeRemoved = Console.ReadLine();
+                        string? noteIndexToBeRemoved = Console.ReadLine();
 
                         if (int.TryParse(noteIndexToBeRemoved, out int inputvalue))
                         {

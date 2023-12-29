@@ -6,21 +6,22 @@ namespace Dagbok;
 
 public class NoteClass
 {
-    public string Author { get; set; }
-    public string Content { get; set; }
+    public string? Author { get; set; }
+    public string? Content { get; set; }
 }
 
 
 class DagBokClass
 {
 
-// Skapa en lista med getter och setters. Listan är av typen objekt
-    public List<NoteClass> Notes { get; set; }
+    // Skapa en lista med getter och setters. Listan är av typen objekt som kommer från klassen NoteClass
+    public List<NoteClass>? Notes { get; set; }
 
     string fileName = "notedblist.json";
     string jsonContent;
 
 
+    //Constructor
     public DagBokClass()
     {
         converJsonFileToList();
@@ -34,15 +35,25 @@ class DagBokClass
         {
             // If the file doesn't exist, create a new empty JSON file
             File.WriteAllText(fileName, "[]");
+
+            //Create empty list
+            Notes = new List<NoteClass>();
         }
-        //Read all content of json file. put into string.
-        jsonContent = File.ReadAllText(fileName);
 
-        // Deserialize the JSON content into a list of NoteClass objects
-        Notes = System.Text.Json.JsonSerializer.Deserialize<List<NoteClass>>(jsonContent);
+        else
+        {
+            //Read all content of json file. put into string.
 
-        // If Notes is still null, initialize a new list
-        Notes ??= new List<NoteClass>();
+            jsonContent = File.ReadAllText(fileName);
+
+            // Deserialize the JSON content into a list of NoteClass objects
+            Notes = System.Text.Json.JsonSerializer.Deserialize<List<NoteClass>>(jsonContent);
+
+        }
+
+
+
+
 
     }
 

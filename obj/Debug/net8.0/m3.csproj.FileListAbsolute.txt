@@ -12,3 +12,4 @@ C:\Users\aousj\Min enhet\Miun\k12 - DT071G C#.NET\m3\obj\Debug\net8.0\refint\m3.
 C:\Users\aousj\Min enhet\Miun\k12 - DT071G C#.NET\m3\obj\Debug\net8.0\m3.pdb
 C:\Users\aousj\Min enhet\Miun\k12 - DT071G C#.NET\m3\obj\Debug\net8.0\m3.genruntimeconfig.cache
 C:\Users\aousj\Min enhet\Miun\k12 - DT071G C#.NET\m3\obj\Debug\net8.0\ref\m3.dll
+C:\Users\aousj\Min enhet\Miun\k12 - DT071G C#.NET\m3\obj\Debug\net8.0\m3.sourcelink.json
