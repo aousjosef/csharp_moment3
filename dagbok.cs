@@ -14,7 +14,7 @@ public class NoteClass
 class DagBokClass
 {
 
-    // Skapa en lista med getter och setters. Listan är av typen objekt som kommer från klassen NoteClass
+    // Skapa en lista med typen objekt getter och setters. Listan är av typen objekt som kommer från klassen NoteClass
     public List<NoteClass>? Notes { get; set; }
 
     string fileName = "notedblist.json";

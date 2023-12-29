@@ -9,10 +9,10 @@ class Program
         DagBokClass dagbok = new DagBokClass();
 
         //   Console.WriteLine(dagbok.aj);
-
+        Console.WriteLine("welcome to dagbok, please choose an option: ");
         void showOptions()
         {
-            Console.WriteLine("welcome to dagbok, please choose an option: ");
+
             Console.WriteLine("1. Show all notes. ");
             Console.WriteLine("2. Add a new note. ");
             Console.WriteLine("3. Delete a note. ");
@@ -20,10 +20,11 @@ class Program
         }
 
 
-        showOptions();
+
 
         while (true)
         {
+            showOptions();
             var option = Console.ReadLine();
 
             if (int.TryParse(option, out int num))
@@ -111,12 +112,14 @@ class Program
 
             else
             {
-                Console.WriteLine("Input has to be a number");
+            Console.WriteLine("Input has to be a number");
             }
-             Console.WriteLine("\n");
+
+            //When case ends
+            Console.WriteLine("\n");
             Console.WriteLine("What do want to do now? ");
 
-            showOptions();
+
         }
 
 
